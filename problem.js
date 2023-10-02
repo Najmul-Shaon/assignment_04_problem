@@ -51,14 +51,25 @@ function sortMaker(arr) {
 // console.log("5th", sortMaker([-4, -20]));
 
 // problem 04
+function findAddress(obj) {
+    const address = Object.values(obj);
+    
+  console.log(typeof address);
+}
+
+const addressBar = {
+  street: 10,
+  house: "15A",
+  society: "Earth Perfect",
+};
+
+findAddress(addressBar);
 
 // problem 05
 function canPay(changeArray, totalDue) {
   let totalTk = 0;
   for (let i = 0; i < changeArray.length; i++) {
     totalTk = totalTk + changeArray[i];
-
-    // console.log(changeArray[i], totalTk);
   }
   if (changeArray.length < 1) {
     return "Please enter a valid array.";
@@ -69,4 +80,4 @@ function canPay(changeArray, totalDue) {
   }
 }
 
-console.log(canPay([1], 10));
+// console.log(canPay([1], 10));
