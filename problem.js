@@ -48,5 +48,25 @@ function sortMaker(arr) {
 // console.log("2nd", sortMaker([4, 2]));
 // console.log("3rd", sortMaker([4, 4]));
 // console.log("4th", sortMaker([1, 2]));
-// console.log("5th", sortMaker([4, -2]));
+// console.log("5th", sortMaker([-4, -20]));
 
+// problem 04
+
+// problem 05
+function canPay(changeArray, totalDue) {
+  let totalTk = 0;
+  for (let i = 0; i < changeArray.length; i++) {
+    totalTk = totalTk + changeArray[i];
+
+    // console.log(changeArray[i], totalTk);
+  }
+  if (changeArray.length < 1) {
+    return "Please enter a valid array.";
+  } else if (totalTk >= totalDue) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(canPay([1], 10));
